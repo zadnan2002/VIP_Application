@@ -13,6 +13,10 @@ function App() {
   }]);
 
   async function handleSubmit(e){
+    if (chatInput==='') {
+      alert('Please enter a message');
+      return;
+    }
 e.preventDefault();
 console.log('submitted');
 let ChatLogNew=[...chatLog, {user:"me", message:chatInput}];
